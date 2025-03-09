@@ -29,10 +29,12 @@ public class Main {
 //        System.out.println(box2.weight);
 //        System.out.println(box2.length + " " + box2.width + " " + box2.height);
 
-        Box box5 = new BoxWeight(1,10,100,1000);
-        System.out.println(box5.width);
+//        Box box5 = new BoxWeight(1,10,100,1000);
+//        System.out.println(box5.width);
 //        System.out.println(box5.weight); // not be assecible
 
 //        BoxWeight box6 = new Box(1,10,100);
+
+        BoxPrice box = new BoxPrice(5,8,200);
     }
 }
