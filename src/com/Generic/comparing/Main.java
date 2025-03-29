@@ -1,6 +1,7 @@
 package com.Generic.comparing;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,7 +14,17 @@ public class Main {
 
         Student[] list = {shantanu, rahul, arpit, kunal, aahan, Aakay};
         System.out.println(Arrays.toString(list));
-        Arrays.sort(list);
+        //Arrays.sort(list);
+        /* Arrays.sort(list, new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                return (int)(o1.rollno - o2.rollno);
+                //we can use mark in place of rollno when we want sorting by marks
+            }
+        }); */
+
+        //lambda equation
+        Arrays.sort(list, (o1,o2) -> (int)(o1.rollno - o2.rollno));
         System.out.println(Arrays.toString(list));
 
 
