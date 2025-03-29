@@ -23,7 +23,7 @@ public class WrapperExample {
         // when a non primitive is final, you cannot reassign it.
 //        kunal = new A("new object");
 
-        A obj = new A("Rnadvsjhv");
+        A obj = new A("Ranvijay");
 
         System.out.println(obj);
 
