@@ -7,6 +7,8 @@ public class Main {
         try {
             divide(a,b);
 //            int c = a / b;
+        } catch (MyException e){
+            System.out.println(e.getMessage());
         } catch (ArithmeticException e){
             System.out.println(e);
             System.out.println(e.getMessage());
