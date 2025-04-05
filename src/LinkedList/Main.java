@@ -9,20 +9,20 @@ public class Main {
 //        System.out.println(list);
 
         LL l = new LL();
-        l.insertFirst(91);
         l.insertFirst(1);
-        l.insertFirst(24);
-        l.insertFirst(46);
 
-        l.insertLast(99);
-        l.insert(34,12);
+        l.insertFirst(4);//4,4,2,1,1,1
+//        l.insertLast(99);
+//        l.insert(34,12);
+//
+//        l.deleteFirst();
+//        System.out.println(l.deleteLast());
+//        System.out.println(l.delete(2));
+//        System.out.println(l.delete(12));
+        //l.insertRec(88,2);
+        //l.rem_dup();
+        //l.display();
 
-        l.deleteFirst();
-        System.out.println(l.deleteLast());
-        System.out.println(l.delete(2));
-        System.out.println(l.delete(12));
-        l.insertRec(88,2);
-        l.display();
 
     /* DLL li = new DLL();
     li.insertFirst(98);

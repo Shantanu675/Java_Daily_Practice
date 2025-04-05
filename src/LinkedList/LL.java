@@ -154,4 +154,174 @@ public class LL {
             this.next = next;
         }
     }
+
+    // remove duplicates
+    public void rem_dup(){
+        Node temp = head;
+
+        while(temp.next != null){
+            if(temp.value == temp.next.value){
+                temp.next = temp.next.next;
+                size--;
+            }
+            else{
+                temp = temp.next;
+            }
+        }
+
+        return;
+    }
+
+    // Merge two sorted LL
+    public Node merge(Node list1, Node list2){
+        Node temp1 = list1;
+        Node temp2 = list2;
+
+        //LL ans = new LL();
+        Node dHead = new Node(0);
+        Node ansNode = dHead;
+        while(temp1 != null && temp2 != null) {
+            if (temp1.value < temp2.value) {
+                dHead.next = temp1;
+                temp1 = temp1.next;
+                dHead = dHead.next;
+            } else {
+                dHead.next = temp2;
+                temp2 = temp2.next;
+                dHead = dHead.next;
+            }
+        }
+
+        if(temp1 != null){
+            dHead.next = temp1;
+        }
+        if(temp2 != null){
+            dHead.next = temp2;
+        }
+        return dHead;
+    }
+
+    // check cycle in linked list
+    public boolean hasCycle(Node head) {
+        Node fast = head;
+        Node slow = head;
+
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if(slow==fast){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // length of cycle in linked list
+    public int lengthCycle(Node head) {
+        Node fast = head;
+        Node slow = head;
+
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if(slow==fast){
+                Node temp = slow;
+                int len = 0;
+                do{
+                    temp = temp.next;
+                    len++;
+                }while(slow.value != temp.value);
+                return len;
+            }
+        }
+        return 0;
+    }
+
+    //detect from where cycle is starts
+    public Node detectCycle(Node head) {
+        Node fast = head;
+        Node slow = head;
+        int length = 0;
+        while (fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if(slow == fast){
+                length = lengthCycle(head);
+                break;
+            }
+        }
+
+        if(length == 0){
+            return null;
+        }
+
+        Node f = head;
+        Node s= head;
+        while(length > 0){
+            s = s.next;
+            length--;
+        }
+
+        while(f != s){
+            s = s.next;
+            f = f.next;
+        }
+        return s;
+    }
+
+    //Happy number problem
+    public int findSquareSum(int num){
+        int sum = 0;
+        while(num > 0){
+            int rem = num % 10;
+            sum += rem * rem;
+            num /= 10;
+        }
+        return sum;
+    }
+
+    public boolean isHappy(int n) {
+        int fast = n;
+        int slow = n;
+
+        do{
+            slow = findSquareSum(n);
+            fast = findSquareSum(findSquareSum(n));
+        }while (slow != fast);
+
+        if(slow == 1){
+            return true;
+        }
+
+        return false;
+    }
+
+    // find middle node
+    public Node middle(Node head){
+        Node fast = head;
+        Node slow = head;
+
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
+    // merge sort
+    public Node sorted(Node head){
+        if(head == null || head.next == null){
+            return head;
+        }
+
+        Node middle = middle(head);
+        Node left = sorted(head);
+        Node right = sorted(middle);
+
+        return merge(left, right);
+    }
 }
+
