@@ -7,21 +7,22 @@ public class Main {
 //        LinkedList<Integer> list = new LinkedList<>();
 //        list.add(90);
 //        System.out.println(list);
-//
-//        LL l = new LL();
-//        l.insertFirst(91);
-//        l.insertFirst(1);
-//        l.insertFirst(24);
-//        l.insertFirst(46);
-//
-//        l.insertLast(99);
-//        l.insert(34,12);
-//
-//        l.deleteFirst();
-//        System.out.println(l.deleteLast());
-//        System.out.println(l.delete(2));
-//        System.out.println(l.delete(12));
-//        l.display();
+
+        LL l = new LL();
+        l.insertFirst(91);
+        l.insertFirst(1);
+        l.insertFirst(24);
+        l.insertFirst(46);
+
+        l.insertLast(99);
+        l.insert(34,12);
+
+        l.deleteFirst();
+        System.out.println(l.deleteLast());
+        System.out.println(l.delete(2));
+        System.out.println(l.delete(12));
+        l.insertRec(88,2);
+        l.display();
 
     /* DLL li = new DLL();
     li.insertFirst(98);
@@ -33,13 +34,13 @@ public class Main {
     //li.insert(13,77);
     li.display(); */
 
-        CLL list = new CLL();
-        list.insert(23);
-        list.insert(39);
-        list.insert(34);
-        list.insert(13);
-
-        list.delete(34);
-        list.display();
+//        CLL list = new CLL();
+//        list.insert(23);
+//        list.insert(39);
+//        list.insert(34);
+//        list.insert(13);
+//
+//        list.delete(34);
+//        list.display();
     }
 }

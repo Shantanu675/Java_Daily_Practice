@@ -34,6 +34,20 @@ public class LL {
         size++;
     }
 
+    // insertion using reccursion
+    public void insertRec(int val, int index){
+        head = insertRec(val, index, head);
+    }
+
+    private Node insertRec(int val, int indx, Node node){
+        if(indx == 0){
+            Node temp = new Node(val, node);
+            size++;
+            return temp;        }
+        node.next = insertRec(val, indx--, node.next);
+        return node;
+    }
+
     public void insert(int val, int indx){
         if(indx == 0){
             insertFirst(val);
