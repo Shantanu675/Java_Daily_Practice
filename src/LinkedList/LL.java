@@ -394,5 +394,85 @@ public class LL {
         }
         return prev;
     }
+
+    //palindrome or not LL
+    public boolean isPalindrome(Node head){
+        Node mid = middle(head);
+        Node rev = reverseInPlace(mid);
+
+        Node ptr1 = head;
+        Node ptr2 = rev;
+
+        while(ptr2.next != null){
+            if(ptr1.value != ptr2.value){
+                return false;
+            }
+            ptr1 = ptr1.next;
+            ptr2 = ptr2.next;
+        }
+        return true;
+    }
+
+    //Reorder 1-4-2-3
+    public void reorderList(Node head) {
+        if(head == null || head.next == null){
+            return;
+        }
+
+        Node mid = middle(head);
+
+        Node ptr1 = head;
+        Node ptr2 = reverseInPlace(head);
+
+        while(ptr1 != null && ptr2 != null){
+            Node temp = ptr1.next;
+            ptr1.next = ptr2;
+            ptr1 = temp;
+
+            temp = ptr2.next;
+            ptr2.next = ptr1;
+            ptr2 = temp;
+        }
+
+        if(ptr1 != null){
+            ptr1.next = null;
+        }
+    }
+
+    //from ChatGPT
+    public void reorderList1(Node head) {
+        if(head == null || head.next == null){
+            return;
+        }
+
+        // Step 1: Find the middle of the list
+        Node mid = middle(head);
+
+        // Step 2: Reverse the second half
+        Node ptr2 = reverseInPlace(mid.next);
+        mid.next = null; // disconnect the first half from the second half
+
+        // Step 3: Merge the two halves
+        Node ptr1 = head;
+
+        while (ptr1 != null && ptr2 != null) {
+            Node temp1 = ptr1.next;
+            Node temp2 = ptr2.next;
+
+            // Reorder pointers
+            ptr1.next = ptr2;
+            ptr2.next = temp1;
+
+            // Move to the next pair of nodes
+            ptr1 = temp1;
+            ptr2 = temp2;
+        }
+
+        // if(ptr1 != null){
+        //     ptr1.next = null;
+        // }
+    }
+
+
 }
 
