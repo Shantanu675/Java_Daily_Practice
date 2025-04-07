@@ -473,6 +473,83 @@ public class LL {
         // }
     }
 
+    //reverse K group
+    public Node reverseKGroup(Node head, int k) {
+        if(k <= 1 || head == null){
+            return head;
+        }
 
+        Node curr = head;
+        Node prev = null;
+        Node next = curr.next;
+
+        while(true){
+            Node last = prev;
+            Node newHead = curr;
+
+            for (int i = 0; curr != null && i < k; i++) {
+                curr.next = prev;
+
+                prev = curr;
+                curr = next;
+                if(next != null){
+                    next = next.next;
+                }
+            }
+            if(last != null){
+                last.next = prev;
+            }
+            else{
+                head = prev;
+            }
+            newHead.next = curr;
+            if(curr == null){
+                break;
+            }
+
+            prev = newHead;
+        }
+        return head;
+    }
+
+    //Reverse k group (alternate)
+    public Node reverseAlternateKGroup(Node head, int k) {
+        if(k <= 1 || head == null){
+            return head;
+        }
+
+        Node curr = head;
+        Node prev = null;
+        Node next = curr.next;
+
+        while(curr != null){
+            Node last = prev;
+            Node newHead = curr;
+
+            for (int i = 0; curr != null && i < k; i++) {
+                curr.next = prev;
+
+                prev = curr;
+                curr = next;
+                if(next != null){
+                    next = next.next;
+                }
+            }
+            if(last != null){
+                last.next = prev;
+            }
+            else{
+                head = prev;
+            }
+            newHead.next = curr;
+
+            //skip k nodes
+            for (int i = 0; curr != null && i < k; i++) {
+                prev = curr;
+                curr = curr.next;
+            }
+        }
+        return head;
+    }
 }
 
