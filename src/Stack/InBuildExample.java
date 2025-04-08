@@ -18,5 +18,6 @@ public class InBuildExample {
         System.out.println(stack);
         stack.push(10);
         stack.push(18);
+        stack.push(18);
     }
 }
