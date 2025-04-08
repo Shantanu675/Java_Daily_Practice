@@ -16,5 +16,6 @@ public class InBuildExample {
         }
         System.out.println(stack.elements());
         System.out.println(stack);
+        stack.push(10);
     }
 }
