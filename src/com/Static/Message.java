@@ -1,4 +1,4 @@
-package com.Shantanu;
+package com.Static;
 
 public class Message {
     public static void main(String[] args) {

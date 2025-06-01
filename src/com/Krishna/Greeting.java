@@ -1,6 +1,6 @@
 package com.Krishna;
 
-import static com.Shantanu.Message.message;
+import static com.Static.Message.message;
 
 public class Greeting {
     public static void main(String[] args) {

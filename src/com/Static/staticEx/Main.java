@@ -1,4 +1,4 @@
-package com.Shantanu.staticEx;
+package com.Static.staticEx;
 
 public class Main {
     public static void main(String[] args) {
