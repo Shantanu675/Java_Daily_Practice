@@ -7,12 +7,12 @@ import java.util.TreeMap;
 public class Main {
     public static void main(String[] args) {
         HashMap<String, Integer> map = new HashMap<>();
-        map.put("Kunal",89);
-        map.put("Karan",99);
-        map.put("Rahul",95);
+        map.put("Kunal", 89);
+        map.put("Karan", 99);
+        map.put("Rahul", 95);
 
         System.out.println(map.get("Karan"));
-        System.out.println(map.getOrDefault("Apoorv",99));
+        System.out.println(map.getOrDefault("Apoorv", 99));
         System.out.println(map);
         System.out.println(map.containsKey("Kunal"));
         System.out.println(map.containsValue(98));
@@ -27,11 +27,12 @@ public class Main {
         System.out.println(set);
 
 
-        TreeMap<String,Integer> t = new TreeMap<>();
-        t.put("Kunal",89);
-        t.put("Karan",99);
-        t.put("Rahul",95);
+        TreeMap<String, Integer> t = new TreeMap<>();
+        t.put("Kunal", 89);
+        t.put("Karan", 99);
+        t.put("Rahul", 95);
 
         System.out.println(t);//sort on the basis of key
+
     }
 }
