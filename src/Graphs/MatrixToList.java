@@ -6,7 +6,7 @@ import java.util.SequencedCollection;
 
 public class MatrixToList {
     public static void main(String[] args) {
-        int[][] arr = {{1,1,0},{1,1,0},{0,0,1}};
+        int[][] arr = {{1,0,0,0},{0,1,1,0},{0,1,1,0},{0,0,0,1}};
         System.out.println(createList(arr));
     }
 
@@ -22,7 +22,7 @@ public class MatrixToList {
                     continue;
                 }
                 if(isConnected[i][j] == 1){
-                    links.add(j+1);
+                    links.add(j);
                 }
             }
             graph.add(links);
