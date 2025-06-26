@@ -20,7 +20,7 @@ public class Gui {
     private void createAndShowGUI() {
         frame = new JFrame("Tic-Tac-Toe");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 400);
+        frame.setSize(500, 500);
         frame.setLayout(new GridLayout(3, 3));
 
         for (int i = 0; i < 9; i++) {

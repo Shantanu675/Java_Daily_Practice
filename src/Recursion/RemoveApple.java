@@ -54,7 +54,6 @@ public class RemoveApple {
         }
 
         if (str.startsWith("apple")) {
-
             return remove_a2(str.substring(5));
         }
 

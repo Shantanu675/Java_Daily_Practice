@@ -1,3 +1,5 @@
+package Recursion;
+
 public class RevDigit {
     static int sum = 0;
     public static void rev(int n){
