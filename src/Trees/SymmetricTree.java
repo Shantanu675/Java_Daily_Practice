@@ -1,7 +1,5 @@
 package Trees;
 
-import java.util.Arrays;
-
 public class SymmetricTree {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
@@ -64,7 +62,7 @@ public class SymmetricTree {
         if(p == null || q == null){
             return false;
         }
-        if(p.val != q.val){
+        if(p.val != q.val) {
             return false;
         }
 

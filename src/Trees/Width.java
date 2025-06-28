@@ -1,6 +1,5 @@
 package Trees;
 
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -53,10 +52,10 @@ public class Width {
     }
 
     private static int findWidth(TreeNode root){
-        if(root == null){
-            return -1;
-        }
         int width = 0;
+        if(root == null){
+            return width;
+        }
         Queue<Tuples> q = new LinkedList<>();
         q.offer(new Tuples(root, 0));
 

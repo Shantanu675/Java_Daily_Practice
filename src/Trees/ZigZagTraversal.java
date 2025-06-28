@@ -1,7 +1,5 @@
 package Trees;
 
-import com.sun.source.tree.Tree;
-
 import java.util.*;
 
 public class ZigZagTraversal {

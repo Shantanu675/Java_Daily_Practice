@@ -24,9 +24,9 @@ public class MaxHeight {
             return 0;
         }
 
-        int lh = 1 + maxHeight(root.left);
-        int lr = 1 + maxHeight(root.right);
+        int lh = maxHeight(root.left);
+        int lr = maxHeight(root.right);
 
-        return Math.max(lh, lr);
+        return Math.max(lh, lr) + 1;
     }
 }

@@ -29,7 +29,7 @@ public class LeftRightView {
         return list;
     }
 
-    private static void rView(TreeNode root,List<Integer> list, int level) {
+    private static void rView(TreeNode root, List<Integer> list, int level) {
         if(root == null){
             return;
         }

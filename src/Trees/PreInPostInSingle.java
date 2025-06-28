@@ -41,10 +41,10 @@ public class PreInPostInSingle {
         List<Integer> inorder = new ArrayList<>();
         List<Integer> postorder = new ArrayList<>();
 
+        if(root == null) return result;
+
         Stack<Pair> st = new Stack<>();
         st.push(new Pair(root, 1));
-
-        if(root == null) return result;
 
         while (! st.empty()){
             Pair current = st.pop();

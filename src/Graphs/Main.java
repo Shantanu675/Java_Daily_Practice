@@ -51,13 +51,13 @@ class DisjointSet {
         if (size.get(ulp_u) < size.get(ulp_v)) {
             parent.set(ulp_v, ulp_u);
             int size1 = size.get(ulp_v);
-            size1++;
+            size1 += size.get(ulp_u);
             size.set(size1, ulp_v);
         }
         else {
             parent.set(ulp_u, ulp_v);
             int size1 = size.get(ulp_u);
-            size1++;
+            size1 += size.get(ulp_v);
             size.set(size1, ulp_u);
         }
     }
