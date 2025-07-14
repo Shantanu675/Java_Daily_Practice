@@ -18,7 +18,7 @@ public class CycleDetectBFSTopo {
     }
 
     public static boolean topological(int v, List<List<Integer>> list) {
-        int[] result = new int[v];
+        //int[] result = new int[v];
         int[] indegree = new int[v];
 
         for (int i = 0; i < v; i++) {

@@ -47,18 +47,18 @@ class DisjointSet {
         int ulp_u = findParent(u);
         int ulp_v = findParent(v);
 
-        if (ulp_u == ulp_v) return;
-        if (size.get(ulp_u) < size.get(ulp_v)) {
+        if(ulp_u == ulp_v) return;
+        if(size.get(ulp_u) > size.get(ulp_v)){
             parent.set(ulp_v, ulp_u);
-            int size1 = size.get(ulp_v);
-            size1 += size.get(ulp_u);
-            size.set(size1, ulp_v);
+            int size1 = size.get(ulp_u) + size.get(ulp_v);
+            size.set(ulp_u, size1);
+            size.set(ulp_v, size1);
         }
         else {
             parent.set(ulp_u, ulp_v);
-            int size1 = size.get(ulp_u);
-            size1 += size.get(ulp_v);
-            size.set(size1, ulp_u);
+            int size1 = size.get(ulp_v) + size.get(ulp_u);
+            size.set(ulp_v, size1);
+            size.set(ulp_u, size1);
         }
     }
 }
@@ -72,13 +72,13 @@ public class Main {
         ds.unionBySize(6,7);
         ds.unionBySize(5,6);
 
-        if (ds.findParent(6) == ds.findParent(7)) {
+        if (ds.findParent(3) == ds.findParent(7)) {
             System.out.println("same");
         } else {
             System.out.println("not same");
         }
 
-        ds.unionByRank(3,7);
+        ds.unionBySize(3,7);
         if (ds.findParent(3) == ds.findParent(7)) {
             System.out.println("same");
         } else {

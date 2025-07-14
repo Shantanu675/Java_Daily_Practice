@@ -6,12 +6,12 @@ import java.util.Stack;
 
 public class AlienDict{
     public static void main(String[] args) {
-//        String[] arr = {"baa", "abcd", "abca", "cab", "cad"};
-//        int n = arr.length;
-//        int k = 4;
-        String[] arr = {"abc", "bat", "ade"};
+        String[] arr = {"baa", "abcd", "abca", "cab", "cad"};
         int n = arr.length;
-        int k = 6;
+        int k = 4;
+//        String[] arr = {"abc", "baf", "ade"};
+//        int n = arr.length;
+//        int k = 6;
         System.out.println(foundOrder(arr, n, k));
     }
 

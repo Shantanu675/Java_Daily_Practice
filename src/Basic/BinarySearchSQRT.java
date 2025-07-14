@@ -1,3 +1,5 @@
+package Basic;
+
 public class BinarySearchSQRT {
     public static void main(String[] args) {
         System.out.printf("%.3f",sqrt(40,3));

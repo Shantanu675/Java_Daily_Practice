@@ -49,7 +49,7 @@ public class ShortestPathDirected {
             dist[i] = (int)1e9;
         }
 
-        dist[4] = 0;
+        dist[6] = 0;
 
         while(! st.empty()){
             int current = st.pop();

@@ -1,3 +1,5 @@
+package Basic;
+
 //Second Largest Without Sorting
 public class SecLargest {
     
@@ -9,7 +11,7 @@ public class SecLargest {
 
     public static int secLarge(int[] arr){
         if(arr.length < 2){
-            System.out.println("No Second lasrgest Element possible");
+            System.out.println("No Second largest Element possible");
             return 0;
         }
 

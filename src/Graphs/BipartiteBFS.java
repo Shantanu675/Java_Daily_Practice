@@ -5,23 +5,23 @@ import java.util.*;
 public class BipartiteBFS {
     public static void main(String[] args) {
         List<List<Integer>> list = new ArrayList<>();
-        list.add(Arrays.asList());
-        list.add(Arrays.asList(2));
-        list.add(Arrays.asList(1,3,6));
-        list.add(Arrays.asList(2,4));
-        list.add(Arrays.asList(3,5,7));
-        list.add(Arrays.asList(4,6));
-        list.add(Arrays.asList(2,5));
-        list.add(Arrays.asList(4,8));
-        list.add(Arrays.asList(7));
-
 //        list.add(Arrays.asList());
 //        list.add(Arrays.asList(2));
-//        list.add(Arrays.asList(1,3,5));
+//        list.add(Arrays.asList(1,3,6));
 //        list.add(Arrays.asList(2,4));
-//        list.add(Arrays.asList(3,5,6));
-//        list.add(Arrays.asList(2,4));
-//        list.add(Arrays.asList(4));
+//        list.add(Arrays.asList(3,5,7));
+//        list.add(Arrays.asList(4,6));
+//        list.add(Arrays.asList(2,5));
+//        list.add(Arrays.asList(4,8));
+//        list.add(Arrays.asList(7));
+
+        list.add(Arrays.asList());
+        list.add(Arrays.asList(2));
+        list.add(Arrays.asList(1,3,5));
+        list.add(Arrays.asList(2,4));
+        list.add(Arrays.asList(3,5,6));
+        list.add(Arrays.asList(2,4));
+        list.add(Arrays.asList(4));
 
         System.out.println(Arrays.toString(list.toArray()));
 

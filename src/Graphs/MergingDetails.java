@@ -18,8 +18,6 @@ public class MergingDetails {
     }
 
     private static List<List<String>> mergeDetails(int n, List<List<String>> details){
-        //List<List<String>> mergeDetails = new ArrayList<>();
-
         DiSet ds = new DiSet(n);
         HashMap<String, Integer> mapNode = new HashMap<>();
 
@@ -51,12 +49,8 @@ public class MergingDetails {
         for (int i = 0; i < n; i++) {
             if(mergeMail[i].size() == 0) continue;
             Collections.sort(mergeMail[i]);
-            List<String> temp = new ArrayList<>();
-            temp.add(details.get(i).get(0));
-            for (String cs : mergeMail[i]){
-                temp.add(cs);
-            }
-            ans.add(temp);
+            mergeMail[i].addFirst(details.get(i).get(0));
+            ans.add(mergeMail[i]);
         }
         return ans;
     }

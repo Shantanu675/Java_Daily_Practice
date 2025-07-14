@@ -1,3 +1,5 @@
+package Basic;
+
 public class EvenSum{
 
     public static void main(String[] args){

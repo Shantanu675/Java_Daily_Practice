@@ -1,3 +1,5 @@
+package Basic;
+
 //I solve this question by linear search approach
 public class Index{
 

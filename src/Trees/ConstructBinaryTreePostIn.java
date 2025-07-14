@@ -14,8 +14,8 @@ public class ConstructBinaryTreePostIn {
     private static TreeNode constructTree(int[] postorder, int[] inorder){
         TreeNode root = new TreeNode(postorder[postorder.length-1]);
         int n = findPosition(root.val, inorder);
-        construct(root, Arrays.copyOfRange(inorder, 0, n), Arrays.copyOfRange(inorder, n+1, inorder.length), postorder);
         index = postorder.length-2;
+        construct(root, Arrays.copyOfRange(inorder, 0, n), Arrays.copyOfRange(inorder, n+1, inorder.length), postorder);
         return root;
     }
 

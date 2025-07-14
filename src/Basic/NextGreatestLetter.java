@@ -1,3 +1,5 @@
+package Basic;
+
 public class NextGreatestLetter {
     public static void main(String[] args) {
         char[] arr = {'c','f','j'};

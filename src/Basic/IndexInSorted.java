@@ -1,3 +1,5 @@
+package Basic;
+
 //To solve this question I use Binary search approach
 public class IndexInSorted{
 

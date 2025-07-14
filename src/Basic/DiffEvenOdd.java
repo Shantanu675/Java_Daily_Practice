@@ -1,3 +1,5 @@
+package Basic;
+
 public class DiffEvenOdd {
     public static void main(String[] args){
         int[] arr = {12,24,13,48,61};

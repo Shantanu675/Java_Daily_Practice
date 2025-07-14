@@ -9,7 +9,7 @@ public class Name{
     public static void displayName(String size){
         int s = Integer.parseInt(size);
         int font = 3 + s * 2;
-        System.out.println(printName(font));
+        System.out.println(printName(font).replace("*","*"));
     }
 
     public static String printName(int size){

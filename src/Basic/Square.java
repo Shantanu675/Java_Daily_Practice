@@ -1,3 +1,5 @@
+package Basic;
+
 public class Square {
     public static void main(String[] args){
         int[] arr = {12,24,36,48,60};

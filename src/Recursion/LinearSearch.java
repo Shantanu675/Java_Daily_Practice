@@ -1,8 +1,10 @@
+package Recursion;
+
 import java.util.ArrayList;
 
 public class LinearSearch {
     public static void main(String[] args) {
-        int[] arr = {1,4,13,6,7,13,16,9,13};
+        int[] arr = {1,4,13,6,7,13,16,13,9};
         System.out.println(indexLinearSearch(arr,9,0));
         System.out.println(linearSearch(arr,9,0));
         indexAllLinearSearch(arr, 13, 0);
@@ -32,8 +34,8 @@ public class LinearSearch {
     }
 
     public static int indexLinearSearch(int[] arr, int target, int indx) {
-        if (indx == arr.length) {
-            return indx;
+        if (indx == arr.length-1 && arr[arr.length-1] != target) {
+            return -1;
         }
         if (arr[indx] == target) {
             return indx;

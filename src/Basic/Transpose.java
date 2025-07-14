@@ -1,3 +1,5 @@
+package Basic;
+
 public class Transpose {
     public static void main(String[] args){
         int[][] matrix = {{1,2,3},{4,5,5},{3,1,7}};

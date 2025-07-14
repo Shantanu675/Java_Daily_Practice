@@ -3,7 +3,6 @@ package Graphs;
 import javax.swing.event.ListDataEvent;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 public class BridgeGraph {

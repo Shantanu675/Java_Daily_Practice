@@ -1,6 +1,8 @@
+package Basic;
+
 public class MissingNumber {
     public static void main(String[] args) {
-        int[] arr = {};
+        int[] arr = {0, 2, 1, 3, 5, 4, 7};
         System.out.println(findMissing(arr));
     }
 

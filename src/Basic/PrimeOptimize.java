@@ -1,6 +1,8 @@
+package Basic;
+
 public class PrimeOptimize {
     public static void main(String[] args) {
-        int n = 37;
+        int n = 100;
         boolean[] prime = new boolean[n+1];
         sieve(n, prime);
     }

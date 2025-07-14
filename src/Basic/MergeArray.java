@@ -1,3 +1,5 @@
+package Basic;
+
 public class MergeArray {
     public static void main(String[] args){
         int[] arr1 = {12,24,10,48,6};

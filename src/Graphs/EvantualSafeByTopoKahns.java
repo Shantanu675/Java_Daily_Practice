@@ -2,7 +2,7 @@ package Graphs;
 
 import java.util.*;
 
-public class CourseSchedule {
+public class EvantualSafeByTopoKahns {
     public static void main(String[] args) {
         List<List<Integer>> list = new ArrayList<>();
         list.add(Arrays.asList(1));

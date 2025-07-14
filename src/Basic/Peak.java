@@ -1,7 +1,9 @@
+package Basic;
+
 public class Peak {
 
     public static void main(String[] args) {
-        int[] arr = {0,2,1,0};
+        int[] arr = {0,2,7,0};
         System.out.println(peakElement(arr));
     }
 

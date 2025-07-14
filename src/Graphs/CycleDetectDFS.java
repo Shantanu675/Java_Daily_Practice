@@ -44,7 +44,7 @@ public class CycleDetectDFS {
 
         for (int i = 1; i < v; i++) {
             if(visit[i] == 0){
-                if(dfs(new Helps(i,-1), list, visit) == true){
+                if(dfs(new Helps(i, -1), list, visit)){
                     return true;
                 }
             }

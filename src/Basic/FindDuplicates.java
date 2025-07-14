@@ -1,3 +1,5 @@
+package Basic;
+
 public class FindDuplicates {
     public static void main(String[] args) {
         int[] arr = {3,3,3,3,3};

@@ -1,3 +1,5 @@
+package Basic;
+
 public class SearchInRange {
     public static void main(String[] args) {
         int[] arr = {12,16,3,7,26,35};

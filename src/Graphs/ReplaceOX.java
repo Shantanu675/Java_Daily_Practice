@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class ReplaceOX {
     public static void main(String[] args) {
-        char[][] matrix = {{'X', 'O', 'X', 'X'},
+        char[][] matrix = {{'X', 'X', 'X', 'X'},
                 {'X', 'O', 'X', 'X'},
                 {'X', 'O', 'X', 'X'},
                 {'X', 'O', 'O', 'X'},
@@ -54,7 +54,7 @@ public class ReplaceOX {
 
             if(newRow >= 0 && newRow < visit.length && newCol >= 0 && newCol < visit[0].length && visit[newRow][newCol] == 0 && matrix[newRow][newCol] == 'O'){
                 dfs(newRow, newCol, matrix, visit, delrow, delcol);
-                visit[newRow][newCol] = 1;
+                //visit[newRow][newCol] = 1;
             }
         }
     }

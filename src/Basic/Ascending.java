@@ -1,3 +1,5 @@
+package Basic;
+
 public class Ascending {
     public static void main(String[] args){
         int[] arr = {12,24,78,48,61};

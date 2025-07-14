@@ -1,3 +1,5 @@
+package Basic;
+
 //In case of non-duplicate elements
 public class FindPivot {
 

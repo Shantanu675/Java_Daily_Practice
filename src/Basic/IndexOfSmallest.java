@@ -1,3 +1,5 @@
+package Basic;
+
 public class IndexOfSmallest {
     public static void main(String[] args){
         int[] arr = {12,24,0,48,60};
