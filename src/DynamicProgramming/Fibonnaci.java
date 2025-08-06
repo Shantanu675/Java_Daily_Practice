@@ -42,7 +42,7 @@ public class Fibonnaci {
     // Tabulation  # TC - O(n)  # SC - O(n)
     public static int fiboTabulation(int n){
         int[] dp = new int[n+1];
-        Arrays.fill(dp, -1);
+        //Arrays.fill(dp, -1);
         return helper1(n, dp);
     }
 
