@@ -12,7 +12,32 @@ public class UniquePathWithObstacle {
         System.out.println(findObstaclePath(m-1, n-1, mat));
         System.out.println(findPathObstacle1(m, n, mat));
         System.out.println(findPathObstacle2(m, n, mat));
-//        System.out.println(findPath3(m, n));
+        System.out.println(findPathObstacle3(m, n, mat));
+    }
+
+    //Space Optimisation
+    private static int findPathObstacle3(int m, int n, int[][] mat) {
+        int[] prev = new int[m];
+        for (int i = 0; i < m; i++) {
+            int[] temp = new int[n];
+            for (int j = 0; j < n; j++) {
+                if(i == 0 && j == 0) {
+                    temp[j] = 1;
+                    continue;
+                }
+                if(mat[i][j] == -1) {
+                    temp[j] = 0;
+                    continue;
+                }
+
+                int up = 0, left = 0;
+                up = prev[j];
+                if(j > 0) left = temp[j-1];
+                temp[j] = up + left;
+            }
+            prev = temp;
+        }
+        return prev[n-1];
     }
 
     // Tabulation
