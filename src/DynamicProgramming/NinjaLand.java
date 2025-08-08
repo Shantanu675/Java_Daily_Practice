@@ -8,8 +8,60 @@ public class NinjaLand {
 
         System.out.println(minCost(land));
         System.out.println(minCost1(land));
+        System.out.println(minCost2(land));
+        System.out.println(minCost3(land));
     }
 
+    // Space Optization
+    private static int minCost3(int[][] land) {
+        int[] prev = new int[land[0].length];
+        Arrays.fill(prev, (int)1e9);
+
+        for(int i = 0; i < land.length; i++) {
+            int[] temp = new int[land[0].length];
+            for (int j = 0; j < land[0].length; j++) {
+                if(i == 0 && j == 0) {
+                    temp[j] = land[0][0];
+                    continue;
+                }
+                int left = (int)(1e9);
+                int up = prev[j] + land[i][j];
+                if(j > 0) left = temp[j-1] + land[i][j];
+
+                temp[j] = Math.min(up, left);
+            }
+            prev = temp;
+        }
+        return prev[land[0].length-1];
+    }
+
+    // Tabulation
+    private static int minCost2(int[][] land) {
+        int[][] dp = new int[land.length][land[0].length];
+        return help2(land, land.length, land[0].length, dp);
+    }
+
+    private static int help2(int[][] arr, int n, int m, int[][] dp){
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if(i == 0 && j == 0) {
+                    dp[0][0] = arr[0][0];
+                    continue;
+                }
+
+                int left = (int)(1e9);
+                int up = (int)(1e9);
+
+                if(i > 0) up = arr[i][j] + dp[i-1][j];
+                if(j > 0) left = arr[i][j] + dp[i][j-1];
+
+                dp[i][j] = Math.min(up, left);
+            }
+        }
+        return dp[n-1][m-1];
+    }
+
+    // Memoization
     private static int minCost1(int[][] land) {
         int[][] dp = new int[land.length][land[0].length];
         for (int i = 0; i < land.length; i++) {
