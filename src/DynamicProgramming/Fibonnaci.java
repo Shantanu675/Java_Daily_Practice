@@ -13,7 +13,7 @@ public class Fibonnaci {
     }
 
     //------------------------------------------------------
-    // Recurssion   # TC - O(n)  # SC - O(n)+O(n)
+    // Recurssion   # TC - O(2^n)  # SC - O(n)+O(n)
     public static int fibo(int n){
         if(n < 2){
             return n;
