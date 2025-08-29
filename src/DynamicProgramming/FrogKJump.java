@@ -11,7 +11,7 @@ public class FrogKJump {
         System.out.println(jumpKFrog2(arr, k));
     }
 
-    //
+    //space optimisation
     private static int jumpKFrog2(int[] arr, int k) {
         int n = arr.length;
         int[] dp = new int[n];
@@ -82,6 +82,4 @@ public class FrogKJump {
         }
         return minStep;
     }
-
-    //
 }

@@ -42,7 +42,7 @@ public class maxiSumButNotExactAdjacent {
         int pick = arr[n] + helper2(n-2, arr, dp);
         int nonPick = 0 + helper2(n-1, arr, dp);
 
-        return Math.max(pick, nonPick);
+        return dp[n] = Math.max(pick, nonPick);
     }
 
     // Tabulation
@@ -54,7 +54,7 @@ public class maxiSumButNotExactAdjacent {
 
     private static int helper3(int n, int[] arr, int[] dp) {
         dp[0] = arr[0];
-        int neg = 0;
+        //int neg = 0;
 
         for (int i = 1; i <= n; i++) {
             int pick = arr[i];

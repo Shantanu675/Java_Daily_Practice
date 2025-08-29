@@ -95,7 +95,6 @@ public class VariableStartEndMaxPath {
 
     // Space Optimisation
     public static int maxPath3(int[][] arr) {
-
         int[] prev = new int[arr[0].length];
         for (int i = 0; i < arr[0].length; i++) {
             prev[i] = arr[0][i];
