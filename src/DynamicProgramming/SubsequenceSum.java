@@ -7,7 +7,8 @@ public class SubsequenceSum {
         int[] arr = {1, 3, 2};
         System.out.println(isSubSeqAvail(arr, 4));
         System.out.println(isSubSeqAvail1(arr, 4));
-        //System.out.println(isSubSeqAvail2(arr, 4));
+        System.out.println(isSubSeqAvail2(arr, 4));
+        System.out.println(isSubSeqAvail3(arr, arr.length, 4));
     }
 
     //Recursion
@@ -52,26 +53,51 @@ public class SubsequenceSum {
     }
 
     // Tabulation
-//    private static boolean isSubSeqAvail2(int[] arr, int target) {
-//        return helper2(arr.length, arr, target);
-//    }
+    private static boolean isSubSeqAvail2(int[] arr, int target) {
+        return helper2(arr.length, arr, target);
+    }
 
-//    private static boolean helper2(int n, int[] arr, int target) {
-//        boolean[][] dp = new boolean[n][target];
-//
-//        for (int i = 0; i < n; i++) dp[i][0] = true;
-//        if(arr[0] <= target) dp[0][arr[0]] = true;
-//
-//        for (int i = 1; i < n; i++) {
-//            for (int j = 1; j <= target; j++) {
-//                boolean notTaken = dp[i-1][j];
-//                boolean taken = false;
-//                if(target >= arr[i]) {
-//                    taken = dp[i-1][j-arr[i]];
-//                }
-//                dp[i][j] = taken || notTaken;
-//            }
-//        }
-//        return dp[n-1][target];
-//    }
+    private static boolean helper2(int n, int[] arr, int target) {
+        boolean[][] dp = new boolean[n][target+1];
+
+        for (int i = 0; i < n; i++) dp[i][0] = true;
+        if(arr[0] <= target) dp[0][arr[0]] = true;
+
+        for (int i = 1; i < n; i++) {
+            for (int j = 1; j <= target; j++) {
+                boolean notTaken = dp[i-1][j];
+                boolean taken = false;
+                if(j >= arr[i]) {
+                    taken = dp[i-1][j-arr[i]];
+                }
+                dp[i][j] = taken || notTaken;
+            }
+        }
+        return dp[n-1][target];
+    }
+
+    //Space Optimisation
+    private static boolean isSubSeqAvail3(int[] arr, int n, int k) {
+        boolean[] prev = new boolean[k+1];
+
+        prev[0] = true;
+
+        if(arr[0] <= k) prev[arr[0]] = true;
+
+        for (int i = 1; i < n; i++) {
+            boolean[] curr = new boolean[k+1];
+            curr[0] = true;
+            for (int j = 1; j <= k; j++) {
+                boolean notPick = prev[j];
+                boolean pick = false;
+                if(arr[i] <= j) {
+                    pick = prev[j-arr[i]];
+                }
+
+                curr[j] = notPick || pick;
+            }
+            prev = curr;
+        }
+        return prev[k];
+    }
 }
