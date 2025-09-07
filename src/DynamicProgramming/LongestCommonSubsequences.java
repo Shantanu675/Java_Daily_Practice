@@ -1,6 +1,6 @@
 package DynamicProgramming;
 
-public class LowestCommonSubsequences {
+public class LongestCommonSubsequences {
     public static void main(String[] args) {
         String s1 = "adcbc";
         String s2 = "dcadb";
