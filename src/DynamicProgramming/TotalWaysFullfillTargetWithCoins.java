@@ -83,7 +83,7 @@ public class TotalWaysFullfillTargetWithCoins {
         if(coins[indx] <= target) {
             take = helper1(indx, coins, target-coins[indx], dp);
         }
-        return take + notTake;
+        return dp[indx][target] = take + notTake;
     }
 
 //    Recursion
