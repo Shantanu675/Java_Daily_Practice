@@ -8,6 +8,7 @@ public class WildCardPatternMatching {
         System.out.println(wildCard(s1, s2));
         System.out.println(wildCard1(s1, s2));
         System.out.println(wildCard2(s1, s2));
+        System.out.println(wildCard3(s1, s2));
     }
 
     //Recursion
@@ -103,5 +104,44 @@ public class WildCardPatternMatching {
             }
         }
         return dp[n][m];
+    }
+
+    //Space optimisation
+    private static boolean wildCard3(String s1, String s2) {
+        int n = s1.length();
+        int m = s2.length();
+
+        boolean[] prev = new boolean[m+1];
+        prev[0] = true;
+        for (int j = 1; j <= m; j++) {
+            prev[j] = false;
+        }
+
+        for (int i = 1; i <= n; i++) {
+            boolean[] curr = new boolean[m+1];
+
+            boolean flag = true;
+            for (int j = 1; j <= i; j++) {
+                if(s1.charAt(j-1) == '*') {
+                    flag = false;
+                    break;
+                }
+            }
+            curr[0] = flag;
+
+            for (int j = 1; j <= m; j++) {
+                if(s1.charAt(i-1) == s2.charAt(j-1) || s1.charAt(i-1) == '?') {
+                    curr[j] = prev[j-1];
+                }
+                else if(s1.charAt(i-1) == '*') {
+                    curr[j] = prev[j] || curr[j-1];
+                }
+                else {
+                    curr[j] = false;
+                }
+            }
+            prev = curr;
+        }
+        return prev[m];
     }
 }
