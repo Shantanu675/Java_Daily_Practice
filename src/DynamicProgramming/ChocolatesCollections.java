@@ -1,6 +1,6 @@
 package DynamicProgramming;
 
-public class ChicolatesCollections {
+public class ChocolatesCollections {
     public static void main(String[] args) {
         int[][] grid = {
                 {2, 3, 1, 2},
