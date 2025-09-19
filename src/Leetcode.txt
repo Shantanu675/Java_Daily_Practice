@@ -1,0 +1,6 @@
+1295 - https://leetcode.com/problems/find-numbers-with-even-number-of-digits/description/
+1672 - https://leetcode.com/problems/richest-customer-wealth/description/
+
+704 - https://leetcode.com/problems/binary-search/description/
+744 - https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/
+34 -
