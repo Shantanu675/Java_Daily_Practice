@@ -3,7 +3,7 @@ package Basic;
 public class Peak {
 
     public static void main(String[] args) {
-        int[] arr = {0,2,7,0};
+        int[] arr = {0,2,7,9};
         System.out.println(peakElement(arr));
     }
 
@@ -11,13 +11,23 @@ public class Peak {
         int start = 0;
         int end = arr.length-1;
 
+//        while(start < end){
+//            int mid = start + (end - start)/2;
+//            if(arr[mid] > arr[mid+1]){
+//                end = mid;
+//            }
+//            else{
+//                start = mid+1;
+//            }
+//        }
+
         while(start < end){
             int mid = start + (end - start)/2;
-            if(arr[mid] > arr[mid+1]){
-                end = mid;
+            if(arr[mid] < arr[mid+1]){
+                start = mid+1;
             }
             else{
-                start = mid+1;
+                end = mid;
             }
         }
         return end;
