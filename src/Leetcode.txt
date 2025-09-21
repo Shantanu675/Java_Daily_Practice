@@ -13,3 +13,8 @@ reference (GFG) :- https://www.geeksforgeeks.org/dsa/find-position-element-sorte
 33 - https://leetcode.com/problems/search-in-rotated-sorted-array/description/
 81 - https://leetcode.com/problems/search-in-rotated-sorted-array-ii/description/
 153 - https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/
+
+reference (GFG) :- https://www.geeksforgeeks.org/dsa/find-rotation-count-rotated-sorted-array/
+
+240 - https://leetcode.com/problems/search-a-2d-matrix-ii/description/
+74 - https://leetcode.com/problems/search-a-2d-matrix/description/
