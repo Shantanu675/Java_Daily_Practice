@@ -11,4 +11,9 @@ public class TwoObjectAdd {
 
 class Stu{
     int a = 10;
+
+//    @Override
+//    public String toString() {
+//        return getClass().getName() + "@" + Integer.toHexString(hashCode());
+//    }
 }

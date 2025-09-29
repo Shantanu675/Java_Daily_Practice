@@ -3,7 +3,15 @@ package OOP;
 import java.util.Arrays;
 
 public class Intro {
+//    static{
+//        Student rohan = new Student();
+//        System.out.println(rohan.marks);
+//        System.out.println(rohan.name);
+//        System.out.println(rohan.rno);
+//    }
+
     public static void main(String[] args) {
+
 //        int[] rno = new int[5];
 //
 //        String[] name = new String[5];
@@ -14,7 +22,7 @@ public class Intro {
         Student[] stu = new Student[5];
 
 //        Student kunal;
-////        System.out.println(kunal);
+//        System.out.println(kunal);
 //        System.out.println(Arrays.toString(stu));
 
 //        Student kunal = new Student();
@@ -62,7 +70,7 @@ class Student{
 //        this.name = "Kun Kushwah";
 //        this.marks = 347F;
         // internally it is like : new Student(200,"anonymous",4569.4)
-        this(200,"anonymous",49.4F);
+        this(200,"anonymous",69F);
     }
 
     //Right(Same variable names)

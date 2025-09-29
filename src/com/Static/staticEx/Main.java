@@ -27,7 +27,7 @@ public class Main {
 
     void fun2(){
         //inside non-static we can call non-static
-        greeting(); // greeting : i want object i am non-static
+        greeting(); // greeting : i want object i am non-static  // my object not created till now
                     // fun2     : i have object use my object
     }
 

@@ -1,5 +1,7 @@
 package com.Static.staticEx;
-
+//  +-----------------------------------------------+
+//  |    What is use of inner class see kk video    |
+//  +-----------------------------------------------+
 public class InnerStatic {
      static class Test{
         String name;
@@ -8,7 +10,7 @@ public class InnerStatic {
             this.name = name;
         }
 
-         public String toString() {
+        public String toString() {
              return name+ "////";
          }
      }
