@@ -47,7 +47,7 @@ public class Main {
 
     static int divide (int a, int b) throws Exception{
         if(b == 0){
-            throw new Exception();
+            throw new MyException("Hi");
         }
         return a/b;
     }

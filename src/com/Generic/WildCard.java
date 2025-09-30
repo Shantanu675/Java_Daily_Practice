@@ -69,6 +69,12 @@ public class WildCard<T extends Number> {
         }
         System.out.println(list);
 
+//        WildCard<String> str = new WildCard<>();
+//        for (int i = 0; i < 14; i++) {
+//            str.add("sad");
+//        }
+//        System.out.println(str);
+
         CustomGenericArrayList<String> str = new CustomGenericArrayList<>();
         for (int i = 0; i < 14; i++) {
             str.add("sad");

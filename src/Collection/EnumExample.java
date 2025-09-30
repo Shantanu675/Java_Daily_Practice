@@ -27,3 +27,6 @@ public class EnumExample {
         System.out.println(week.ordinal());
     }
 }
+
+//When the JVM loads the enum class, it creates all enum instances (Monday, Tuesday, ...).
+//So the Week() constructor runs for each constant, even if you only use one in your code.

@@ -14,6 +14,5 @@ public class Main {
         twin.arr[0] = 100;
         System.out.println(Arrays.toString(twin.arr));
         System.out.println(Arrays.toString(kunal.arr));
-
     }
 }
