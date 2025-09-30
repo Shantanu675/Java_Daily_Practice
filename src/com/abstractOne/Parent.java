@@ -16,6 +16,6 @@ public abstract class Parent {
         System.out.println("This is normal method");
     }
 
-    abstract void career();
+    abstract void career(); // may be public or protected
     abstract void partner();
 }

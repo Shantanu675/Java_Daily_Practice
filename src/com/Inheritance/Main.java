@@ -24,17 +24,17 @@ public class Main {
 //        BoxWeight box1 = new BoxWeight();
 //        System.out.println(box1.weight);
 //        System.out.println(box1.length + " " + box1.width + " " + box1.height);
-//
+
 //        BoxWeight box2 = new BoxWeight(1,2,3,4);
 //        System.out.println(box2.weight);
 //        System.out.println(box2.length + " " + box2.width + " " + box2.height);
 
 //        Box box5 = new BoxWeight(1,10,100,1000);
 //        System.out.println(box5.width);
-//        System.out.println(box5.weight); // not be assecible
+//        System.out.println(box5.weight); // not be accessible
 
 //        BoxWeight box6 = new Box(1,10,100);
 
-        BoxPrice box = new BoxPrice(5,8,200);
+//        BoxPrice box = new BoxPrice(5,8,200);
     }
 }
