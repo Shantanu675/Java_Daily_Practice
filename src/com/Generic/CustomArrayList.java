@@ -54,6 +54,7 @@ public class CustomArrayList {
     public String toString(){
         return "CustomArrayList {" + "data" + Arrays.toString(data) + ", size" + size + "}";
     }
+
     public static void main(String[] args) {
 //        ArrayList list = new ArrayList();
         CustomArrayList list = new CustomArrayList();

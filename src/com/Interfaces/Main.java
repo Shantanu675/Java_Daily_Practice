@@ -20,6 +20,7 @@ public class Main {
 //        car.acc();
 //        car.start();
 //        car.stop();
+//        car.brake();     // not accessible     // only that accessible which available in Engine
 //        System.out.println(car.price); // accessible
 
         NiceCar c = new NiceCar();
@@ -28,5 +29,6 @@ public class Main {
         c.upgradeEngine(new ElectricEngine());
         c.start();
         c.startMusic();
+        c.brake();
     }
 }

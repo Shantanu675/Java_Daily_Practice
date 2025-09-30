@@ -21,6 +21,6 @@ public class Car implements Engine, Break, Media{
 
     @Override
     public void acc(){
-        System.out.println("I acc like a normal car");
+        System.out.println("I acc engine like a normal car");
     }
 }

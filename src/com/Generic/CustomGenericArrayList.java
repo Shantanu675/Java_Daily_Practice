@@ -34,8 +34,8 @@ public class CustomGenericArrayList<T> {
         data = temp;
     }
 
-    public T remove(){
-        T removed = (T)(data[--size]);
+    public Object remove(){
+        Object removed = (data[--size]);
         return removed;
     }
 
@@ -67,6 +67,8 @@ public class CustomGenericArrayList<T> {
             str.add("sad");
         }
         System.out.println(str);
+//        Object s = list.remove();
+//        System.out.println(s);  asseccible
     }
 }
 

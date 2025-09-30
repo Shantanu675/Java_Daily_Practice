@@ -24,6 +24,10 @@ public class NiceCar {
         engine.acc();
     }
 
+    public void brake(){
+        engine.brake();
+    }
+
     public void startMusic(){
         player.start();
     }

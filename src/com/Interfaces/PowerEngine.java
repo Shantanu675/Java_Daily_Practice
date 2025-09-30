@@ -1,6 +1,6 @@
 package com.Interfaces;
 
-public class PowerEngine implements Engine{
+public class PowerEngine implements Engine, Break{
 
     @Override
     public void start(){
@@ -15,5 +15,10 @@ public class PowerEngine implements Engine{
     @Override
     public void acc(){
         System.out.println("PowerEngine acc");
+    }
+
+    @Override
+    public void brake() {
+        System.out.println("PowerEngine car stops");
     }
 }
