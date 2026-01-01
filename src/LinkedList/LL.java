@@ -43,7 +43,8 @@ public class LL {
         if(indx == 0){
             Node temp = new Node(val, node);
             size++;
-            return temp;        }
+            return temp;
+        }
         node.next = insertRec(val, indx--, node.next);
         return node;
     }
@@ -198,7 +199,7 @@ public class LL {
         if(temp2 != null){
             dHead.next = temp2;
         }
-        return dHead;
+        return ansNode;
     }
 
     // check cycle in linked list
@@ -439,7 +440,7 @@ public class LL {
         }
     }
 
-    //from ChatGPT
+    //from ChatGPTx
     public void reorderList1(Node head) {
         if(head == null || head.next == null){
             return;
@@ -552,4 +553,3 @@ public class LL {
         return head;
     }
 }
-
