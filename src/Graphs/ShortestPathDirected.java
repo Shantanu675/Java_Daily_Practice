@@ -13,6 +13,7 @@ class Inf{
         this.dist = dist;
     }
 }
+
 public class ShortestPathDirected {
     public static void main(String[] args) {
         //int[][] graph = {{0,1,2}, {0,4,1}, {4,5,4}, {4,2,2}, {1,2,3}, {2,3,6}, {5,3,1}};
